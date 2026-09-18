@@ -1,0 +1,11 @@
+{
+  "name": "cursor-clijev-compaction",
+  "version": "0.1.0",
+  "description": "Jev-scored recovery after Cursor CLI native compact. Captures tool I/O, scores keep/drop, re-injects kept facts. Does not replace native compact or write user hooks.",
+  "author": {
+    "name": "cursor-clijev-compaction contributors"
+  },
+  "license": "MIT",
+  "keywords": ["hooks", "compaction", "jev", "cursor-cli"],
+  "hooks": "hooks/hooks.json"
+}

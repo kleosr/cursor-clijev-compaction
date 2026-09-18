@@ -1,9 +1,10 @@
 {
-  "name": "cursor-jev-compaction",
+  "name": "cursor-clijev-compaction",
   "version": "0.1.0",
   "description": "Jev-scored context recovery for Cursor CLI. Captures tool I/O, scores keep/drop, re-injects verbatim facts after native compact.",
   "type": "module",
   "license": "MIT",
+  "packageManager": "pnpm@9.15.4",
   "engines": {
     "node": ">=18"
   },
@@ -21,7 +22,8 @@
     "hooks",
     ".cursor-plugin",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "SECURITY.md"
   ],
   "scripts": {
     "build": "tsc",

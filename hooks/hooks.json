@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "command": "node ${CURSOR_PLUGIN_ROOT}/hooks/run.mjs postToolUse",
+        "timeout": 15,
+        "failClosed": false
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "command": "node ${CURSOR_PLUGIN_ROOT}/hooks/run.mjs postToolUseFailure",
+        "timeout": 15,
+        "failClosed": false
+      }
+    ],
+    "preCompact": [
+      {
+        "command": "node ${CURSOR_PLUGIN_ROOT}/hooks/run.mjs preCompact",
+        "timeout": 90,
+        "failClosed": false
+      }
+    ],
+    "stop": [
+      {
+        "command": "node ${CURSOR_PLUGIN_ROOT}/hooks/run.mjs stop",
+        "timeout": 15,
+        "failClosed": false,
+        "loop_limit": 1
+      }
+    ],
+    "sessionStart": [
+      {
+        "command": "node ${CURSOR_PLUGIN_ROOT}/hooks/run.mjs sessionStart",
+        "timeout": 15,
+        "failClosed": false
+      }
+    ]
+  }
+}

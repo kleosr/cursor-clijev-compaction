@@ -1,0 +1,9 @@
+{"role":"user","message":{"content":[{"type":"text","text":"Fix the flaky test. Never edit generated.ts."}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Reading the test."},{"type":"tool_use","id":"call_read","name":"Read","input":{"path":"tests/flaky.test.ts"}}]}}
+{"role":"user","message":{"content":[{"type":"tool_result","tool_use_id":"call_read","content":"describe('flaky', () => { it('fails', () => { expect(1).toBe(2) }) })"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Searching timeouts."},{"type":"tool_use","id":"call_grep","name":"Grep","input":{"pattern":"timeout","path":"tests"}}]}}
+{"role":"user","message":{"content":[{"type":"tool_result","tool_use_id":"call_grep","content":"tests/flaky.test.ts:12: timeout"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Checking the runner next."}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"Keep going."}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Still looking at the failure."}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"continue"}]}}

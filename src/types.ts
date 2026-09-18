@@ -116,6 +116,7 @@ export type JevState = string | object;
 export interface NoulQuestion {
   type: 'noul';
   instructions: string;
+  criteria?: { true: string; false: string };
 }
 
 export type JevQuestions = Record<string, NoulQuestion>;
